@@ -1,1 +1,1 @@
-# updata opensea metadata
+# updata opensea NFT metadata
