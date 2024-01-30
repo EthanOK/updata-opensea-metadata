@@ -1,0 +1,15 @@
+{
+  "name": "updata-opensea-metadata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "updata metadata": "node src/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api": "^6.1.1",
+    "dotenv": "^16.4.1"
+  }
+}
