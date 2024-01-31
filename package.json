@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "updata metadata": "node src/main.js"
+    "update metadata": "node src/main.js"
   },
   "author": "",
   "license": "ISC",
