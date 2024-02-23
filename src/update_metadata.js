@@ -18,4 +18,35 @@ async function update_metadata(contract_address, start_tokenId, end_tokenId) {
     }
   }
 }
-module.exports = { update_metadata };
+
+async function update_okx_metadata(
+  contract_address,
+  start_tokenId,
+  end_tokenId
+) {
+  for (let i = end_tokenId; i >= start_tokenId; i--) {
+    try {
+      // 获取当前时间戳
+      const timestamp = Date.now();
+      let url = "https://www.okx.com/priapi/v1/nft/refresh?t=" + timestamp;
+      let bodyData = {
+        contractAddress: contract_address,
+        tokenId: i,
+        looker: "",
+        chain: 1,
+      };
+
+      let response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(bodyData),
+      });
+      let result = await response.json();
+      console.log("state:" + result.data + " tokenId: " + i);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+module.exports = { update_metadata, update_okx_metadata };

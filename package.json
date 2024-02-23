@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "update metadata": "node src/main.js"
+    "update opensea metadata": "node src/main.js",
+    "update OKX metadata": "node src/update_okx_metadata.js"
   },
   "author": "",
   "license": "ISC",
