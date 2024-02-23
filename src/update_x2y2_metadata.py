@@ -11,6 +11,7 @@ def updata(start, end):
         driver.get(url)
         token = driver.find_element("xpath", "//*[@id='__next']/div[1]/div/header/h1")
         if token.text != "YGME":
+            print(str(i))
             continue
         else:
             button = driver.find_element(
@@ -24,10 +25,10 @@ def updata(start, end):
 
 
 # 创建线程
-thread1 = threading.Thread(target=updata, args=(2000, 3000))
-thread2 = threading.Thread(target=updata, args=(3000, 4000))
-thread3 = threading.Thread(target=updata, args=(4000, 5000))
-thread4 = threading.Thread(target=updata, args=(5000, 6000))
+thread1 = threading.Thread(target=updata, args=(3398, 3500))
+thread2 = threading.Thread(target=updata, args=(4380, 4500))
+thread3 = threading.Thread(target=updata, args=(7000, 7200))
+thread4 = threading.Thread(target=updata, args=(6452, 6500))
 
 
 # 启动线程
