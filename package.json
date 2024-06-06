@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@api/opensea": "file:.api/apis/opensea",
     "api": "^6.1.1",
-    "dotenv": "^16.4.1"
+    "dotenv": "^16.4.1",
+    "opensea-js": "^7.1.9"
   }
 }
